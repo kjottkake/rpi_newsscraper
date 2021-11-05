@@ -10,6 +10,6 @@ opentag='<article class=\"article column large-6 small-6 article--nyheter\">'
 closetag='<\/article>'
 #opentag='<article class=*>'
 #closetag='</article>'
-sed -n "/$opentag/,/$closetag/p" tv2nyheter.html > articles.html
+sed -n "/$opentag/,/$closetag/p" tv2nyheter.html > tv2articles.html
 
 
