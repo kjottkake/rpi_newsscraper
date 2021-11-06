@@ -1,4 +1,4 @@
 #!/bin/bash
 
-rm articles.html
+rm tv2articles.html
 rm tv2nyheter.html
