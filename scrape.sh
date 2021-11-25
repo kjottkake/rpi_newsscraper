@@ -15,6 +15,8 @@ sed -n "/$opentag/,/$closetag/p" tv2nyheter.html > tv2articles.html
 #get urls and make into new list
 cat tv2articles.html | grep 'href' > tv2articleUrls.html
 
+cat tv2articles.html | grep 'src' > tv2articleImageUrl.html
 
 #remove article opening tag
 #sed 's/<article class.*>//g' tv2articles.html
+
