@@ -1,15 +1,11 @@
 #!/bin/bash
 
-#curl tv2 news
+#get tv2 news and write into tv2nyheter file
 curl  https://www.tv2.no/nyheter  > tv2nyheter.html
 
-
-#opentag='<div class=\"article__content\">'
+#get articles elements from tv2nyheter file and write into tv2articles
 opentag='<article class=\"article column large-6 small-6 article--nyheter\">'
-#closetag='<\/div>'
 closetag='<\/article>'
-#opentag='<article class=*>'
-#closetag='</article>'
 sed -n "/$opentag/,/$closetag/p" tv2nyheter.html > tv2articles.html
 
 #get urls and make into new list
