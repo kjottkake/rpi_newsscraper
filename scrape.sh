@@ -11,7 +11,12 @@ sed -n "/$opentag/,/$closetag/p" tv2nyheter.html > tv2articles.html
 #get urls and make into new list
 cat tv2articles.html | grep 'href' > tv2articleUrls.html
 
+CURRENTDATE=$(date +"%Y-%m-%d")
+#create new directory
+mkdir ./src/articles/$CURRENTDATE
 #gets urls from article urls
+
+
 grep -oP '/nyheter/\K.*' tv2articleUrls.html | sed 's/\/\">//g' > urls_tv2.txt  
 
 
