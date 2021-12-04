@@ -11,6 +11,7 @@ sed -n "/$opentag/,/$closetag/p" tv2nyheter.html > tv2articles.html
 #get urls and make into new list
 cat tv2articles.html | grep 'href' > tv2articleUrls.html
 
+
 CURRENTDATE=$(date +"%Y-%m-%d")
 #create new directory
 mkdir ./src/articles/$CURRENTDATE
@@ -30,8 +31,11 @@ if test -f "$FILE"; then                #checks to see if file exists
         do
                 ARTICLE=$(sed "${i}q;d" $FILE)
                 curl $URL+$ARTICLE > ./src/articles/$CURRENTDATE/$ARTICLE.html
-                #echo $ARTICLE
-        done
+		titleOpentag='<h1 itemprop="headline" class="articleheader__title">'
+        	titleClosetag='</h1>'
+		#get the title
+		
+	done
         #get the title 
         #get the image 
 else
