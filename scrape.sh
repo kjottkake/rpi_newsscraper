@@ -15,14 +15,27 @@ CURRENTDATE=$(date +"%Y-%m-%d")
 #create new directory
 mkdir ./src/articles/$CURRENTDATE
 #gets urls from article urls
-
-
 grep -oP '/nyheter/\K.*' tv2articleUrls.html | sed 's/\/\">//g' > urls_tv2.txt  
 
+#check to see if initial file exists, if not exit
+FILE=./urls_tv2.txt
+URL="https://www.tv2.no/a/"
+if test -f "$FILE"; then                #checks to see if file exists
+        echo "$FILE exists."            #if the file exists print OK
+        ARTICLECOUNT=$(wc -l < "$FILE") #saves number of articles into variable
+        echo $ARTICLECOUNT              #prints out how many articles there are
+        #here is where the logic starts
+        #for each article
+        for ((i=0; i<=$ARTICLECOUNT; i++))
+        do
+                ARTICLE=$(sed "${i}q;d" $FILE)
+                curl $URL+$ARTICLE > ./src/articles/$CURRENTDATE/$ARTICLE.html
+                #echo $ARTICLE
+        done
+        #get the title 
+        #get the image 
+else
+        echo "ERROR: cannot find $FILE" #file not found
+fi  #end if
 
-#gets image urls
-#cat tv2articles.html | grep 'src' > tv2articleImageUrl.html
-
-#remove article opening tag
-#sed 's/<article class.*>//g' tv2articles.html
 
