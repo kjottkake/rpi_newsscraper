@@ -11,6 +11,10 @@ if test -f "$FILE"; then  		#checks to see if file exists
 	echo $ARTICLECOUNT		#prints out how many articles there are
 	#here is where the logic starts
 	#for each article
+	for ((i=0; i<=$ARTICLECOUNT; i++))
+	do
+		echo test
+	done
 	#get the title 
 	#get the image 
 else
