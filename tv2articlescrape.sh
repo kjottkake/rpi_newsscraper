@@ -4,7 +4,7 @@
 
 #check to see if initial file exists, if not exit
 FILE=./urls_tv2.txt
-
+URL="https://www.tv2.no/a/"
 if test -f "$FILE"; then  		#checks to see if file exists
 	echo "$FILE exists."		#if the file exists print OK
 	ARTICLECOUNT=$(wc -l < "$FILE")	#saves number of articles into variable
@@ -13,7 +13,9 @@ if test -f "$FILE"; then  		#checks to see if file exists
 	#for each article
 	for ((i=0; i<=$ARTICLECOUNT; i++))
 	do
-		echo test
+		ARTICLE=$(sed "${i}q;d" $FILE)
+		#curl
+		echo $ARTICLE
 	done
 	#get the title 
 	#get the image 
