@@ -14,8 +14,8 @@ if test -f "$FILE"; then  		#checks to see if file exists
 	for ((i=0; i<=$ARTICLECOUNT; i++))
 	do
 		ARTICLE=$(sed "${i}q;d" $FILE)
-		#curl
-		echo $ARTICLE
+		curl $URL+$ARTICLE > $ARTICLE.test
+		#echo $ARTICLE
 	done
 	#get the title 
 	#get the image 
