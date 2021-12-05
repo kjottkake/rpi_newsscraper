@@ -9,3 +9,7 @@ body{
 h1 {
     font-family: 'Roboto Slab', serif;
 }
+
+img {
+    width: 80%;
+}
