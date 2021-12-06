@@ -35,7 +35,7 @@ if test -f "$FILE"; then                #checks to see if file exists
         #for each article
         for ((i=0; i<=$ARTICLECOUNT; i++))
         do
-		WORKINGDIR='./src/articles/${CURRENTDATE}'
+		WORKINGDIR="./src/articles/${CURRENTDATE}"
                 ARTICLE=$(sed "${i}q;d" $FILE)                                  #set ARTICLE variable
                 curl $URL+$ARTICLE > $WORKINGDIR/$ARTICLE.html    #get urls into separate html files      
 		#titleOpentag='<h1 itemprop="headline" class="articleheader__title">'
