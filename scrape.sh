@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #get tv2 news and write into tv2nyheter file
-curl  https://www.tv2.no/nyheter  > tv2nyheter.html
+curl  https://www.tv2.no/nyheter > tv2nyheter.html
 echo "Curled tv2.no/nyheter"
 
 #get articles elements from tv2nyheter file and write into tv2articles
@@ -35,8 +35,9 @@ if test -f "$FILE"; then                #checks to see if file exists
         #for each article
         for ((i=0; i<=$ARTICLECOUNT; i++))
         do
-                ARTICLE=$(sed "${i}q;d" $FILE)                                    #set ARTICLE variable
-                curl $URL+$ARTICLE > ./src/articles/$CURRENTDATE/$ARTICLE.html    #get urls into separate html files      
+		WORKINGDIR='./src/articles/$CURRENTDATE'
+                ARTICLE=$(sed "${i}q;d" $FILE)                                  #set ARTICLE variable
+                curl $URL+$ARTICLE > $WORKINGDIR/$ARTICLE.html    #get urls into separate html files      
 		#titleOpentag='<h1 itemprop="headline" class="articleheader__title">'
         	titleOpentag='<h1'
 		titleClosetag='</h1>'
