@@ -49,8 +49,8 @@ if test -f "$FILE"; then                #checks to see if file exists
 		#get the title
 		grep $titleOpentag ./src/articles/$CURRENTDATE/$ARTICLE.html | sed -e 's/<[^>]*>//g' >> ./src/articles/$CURRENTDATE/article$i.txt
 		#get img
-		sed -n "/$imagetag/,/$imageclosetag/p" ./src/articles/$CURRENTDATE/$ARTICLE.html | grep -oP 'data-src=\".*?\"' | grep -Po '="\K[^"]+' > ./src/articles/$CURRENTDATE/images.txt
-		sed -n '1q;d' ./src/articles/$CURRENTDATE/images.txt >> ./src/articles/$CURRENTDATE/article$i.txt
+		sed -n "/$imagetag/,/$imageclosetag/p" ./src/articles/$CURRENTDATE/$ARTICLE.html | grep -oP 'data-src=\".*?\"' | grep -Po '="\K[^"]+' > ./src/articles/$CURRENTDATE/images$i.txt
+		sed '1q;d' ./src/articles/$CURRENTDATE/images$i.txt >> ./src/articles/$CURRENTDATE/article$i.txt
  		#get date
 		echo $CURRENTDATE >> ./src/articles/$CURRENTDATE/article$i.txt
 	done
