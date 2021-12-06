@@ -37,13 +37,15 @@ if test -f "$FILE"; then                #checks to see if file exists
         do
                 ARTICLE=$(sed "${i}q;d" $FILE)                                    #set ARTICLE variable
                 curl $URL+$ARTICLE > ./src/articles/$CURRENTDATE/$ARTICLE.html    #get urls into separate html files      
-		titleOpentag='<h1 itemprop="headline" class="articleheader__title">'
-        	titleClosetag='</h1>'
+		#titleOpentag='<h1 itemprop="headline" class="articleheader__title">'
+        	titleOpentag='<h1'
+		titleClosetag='</h1>'
 		#createfile
 		touch ./src/articles/$CURRENTDATE/article$i.txt
 		#get url
 		echo $URL$ARTICLE > ./src/articles/$CURRENTDATE/article$i.txt
 		#get the title
+		grep $titleOpentag ./src/articles/$CURRENTDATE/$ARTICLE.html | sed -e 's/<[^>]*>//g' >> ./src/articles/$CURRENTDATE/article$i.txt
 		#get img
 		#get date
 	done
