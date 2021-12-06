@@ -46,14 +46,14 @@ if test -f "$FILE"; then                #checks to see if file exists
 		#createfile
 		touch ./src/articles/$CURRENTDATE/article$i.txt
 		#get url
-		echo $URL$ARTICLE > $WORKINGDIR/article$i.txt
+		echo $URL$ARTICLE > ./src/articles/$CURRENTDATE/article$i.txt
 		#get the title
-		grep $titleOpentag $WORKINGDIR/$ARTICLE.html | sed -e 's/<[^>]*>//g' >> $WORKINGDIR/article$i.txt
+		grep $titleOpentag ./src/articles/$CURRENTDATE/$ARTICLE.html | sed -e 's/<[^>]*>//g' >> ./src/articles/$CURRENTDATE/article$i.txt
 		#get img
-		sed -n "/$imagetag/,/$imageclosetag/p" $WORKINGDIR/$ARTICLE.html | grep -oP 'data-src=\".*?\"' | grep -Po '="\K[^"]+' > ./src/articles/$CURRENTDATE/images$i.txt
-		sed '1q;d' $WORKINGDIR/images$i.txt >> $WORKINGDIR/article$i.txt
+		sed -n "/$imagetag/,/$imageclosetag/p" ./src/articles/$CURRENTDATE/$ARTICLE.html | grep -oP 'data-src=\".*?\"' | grep -Po '="\K[^"]+' > ./src/articles/$CURRENTDATE/images$i.txt
+		sed '1q;d' ./src/articles/$CURRENTDATE/images$i.txt >> ./src/articles/$CURRENTDATE/article$i.txt
  		#get date
-		echo $CURRENTDATE >> $WORKINGDIR/article$i.txt
+		echo $CURRENTDATE >> ./src/articles/$CURRENTDATE/article$i.txt
 	done
 else
         echo "ERROR: cannot find $FILE" #file not found
