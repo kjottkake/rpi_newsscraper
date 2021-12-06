@@ -39,11 +39,13 @@ if test -f "$FILE"; then                #checks to see if file exists
                 curl $URL+$ARTICLE > ./src/articles/$CURRENTDATE/$ARTICLE.html
 		titleOpentag='<h1 itemprop="headline" class="articleheader__title">'
         	titleClosetag='</h1>'
+		#createfile
+		touch ./src/articles/$CURRENTDATE/article$i.txt
+		#get url
 		#get the title
-		
+		#get img
+		#get date
 	done
-        #get the title 
-        #get the image 
 else
         echo "ERROR: cannot find $FILE" #file not found
 fi  #end if
