@@ -40,6 +40,8 @@ if test -f "$FILE"; then                #checks to see if file exists
 		#titleOpentag='<h1 itemprop="headline" class="articleheader__title">'
         	titleOpentag='<h1'
 		titleClosetag='</h1>'
+		imagetag='<figure>'
+		imageclosetag='<\/figure>'
 		#createfile
 		touch ./src/articles/$CURRENTDATE/article$i.txt
 		#get url
@@ -47,6 +49,8 @@ if test -f "$FILE"; then                #checks to see if file exists
 		#get the title
 		grep $titleOpentag ./src/articles/$CURRENTDATE/$ARTICLE.html | sed -e 's/<[^>]*>//g' >> ./src/articles/$CURRENTDATE/article$i.txt
 		#get img
+		sed -n "/$imagetag/,/$imageclosetag/p" ./src/articles/$CURRENTDATE/$ARTICLE.html | grep -oP 'data-src=\".*?\"' | grep -Po '="\K[^"]+' > ./src/articles/$CURRENTDATE/images.txt
+		sed -n '1q;d' ./src/articles/$CURRENTDATE/images.txt >> 
 		#get date
 	done
 else
