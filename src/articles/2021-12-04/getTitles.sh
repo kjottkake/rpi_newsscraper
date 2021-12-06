@@ -12,7 +12,8 @@ imagetag='<figure>'
 imageclosetag='<\/figure>'
 #grep $imagetag test.html | grep src
 
-sed -n "/$imagetag/,/$imageclosetag/p" test.html | grep -oP 'data-src=\".*?\"' | grep -Po '="\K[^"]+'
+sed -n "/$imagetag/,/$imageclosetag/p" test.html | grep -oP 'data-src=\".*?\"' | grep -Po '="\K[^"]+' > images.txt
+
 
 
 
