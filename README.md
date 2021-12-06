@@ -48,3 +48,6 @@ https://linuxize.com/post/bash-concatenate-strings/
 How to get nth line from file
 https://stackoverflow.com/questions/6022384/bash-tool-to-get-nth-line-from-a-file/6022431
 
+How to grep src from html
+https://stackoverflow.com/questions/44055023/using-grep-to-get-src-attribute-from-html-file
+
