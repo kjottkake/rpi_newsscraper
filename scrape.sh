@@ -58,3 +58,66 @@ else
 fi  #end if
 
 
+#Here we build the individual pages along with the index page.
+for ((i=1; i<4; i++))
+do
+	echo $i
+	ARTICLE=./src/articles/$CURRENTDATE/article$i.txt
+	URL=$(sed "1q;d" $ARTICLE)
+	TITLE=$(sed "2q;d" $ARTICLE)
+	IMG=$(sed "3q;d" $ARTICLE)
+	DATE=$(sed "4q;d" $ARTICLE)
+	touch ./src/articles/$CURRENTDATE/article$i.html
+	echo "
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+    		<meta charset="UTF-8">
+    		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    		<title>$TITLE</title>
+    		<link rel="stylesheet" href="../style.css">
+	</head>
+	<body>
+    		<h1>$TITLE</h1>
+    		<img src="$IMG" alt="$TITLE">
+    		<p>Scrapped on $DATE</p>
+    		<p><a href="$URL">Original Article on TV2.no/nyheter</a></p>
+    		<p><a href="../index.html">Main Page</a></p>
+	</body>
+	</html>	
+        " > ./src/articles/$CURRENTDATE/article$i.html
+done
+
+touch ./src/index.html
+echo "
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>News Source - Your Best Source of Online News Since 1882</title>
+	<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+	<h1>Today's Headlines</h1>
+	<ul>
+" > ./src/index.html
+
+for ((i=1;i<4;i++))
+do
+	ARTICLE=./src/articles/$CURRENTDATE/article$i.txt
+	URL=$(sed "1q;d" $ARTICLE)
+	TITLE=$(sed "2q;d" $ARTICLE)
+	echo "<li>" >> ./src/index.html
+	echo "<a href="$URL">" >>./src/index.html
+	echo $TITLE >> ./src/index.html
+	echo "</a>" >>./src/index.html
+	echo "</li>" >> ./src/index.html
+done
+
+echo "</ul>
+</body>
+</html>" >> ./src/index.html
+

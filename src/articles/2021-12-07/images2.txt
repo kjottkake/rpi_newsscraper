@@ -1,3 +1,5 @@
-https://www.cdn.tv2.no/images/14411030.jpg?imageId=14411030&x=0&y=0&cropw=100&croph=75.188916876574&width=1060&height=597
-https://www.cdn.tv2.no/images/14410875.jpg?imageId=14410875&x=0&y=6.2992125984252&cropw=100&croph=60.629921259843&width=400&height=240
-https://www.cdn.tv2.no/images/14410039.jpg?imageId=14410039&x=0&y=10.236220472441&cropw=100&croph=60.629921259843&width=400&height=240
+https://labrador.tv2.no/images/lab-head_1000.png
+https://www.cdn.tv2.no/images/14338155.jpg?imageId=14338155&x=0&y=0&cropw=100&croph=83.248730964467&width=698&height=394
+https://www.cdn.tv2.no/images/14247057.jpg?imageId=14247057&x=0&y=0&cropw=100&croph=85.194805194805&width=244&height=138
+https://www.cdn.tv2.no/images/14412765.jpg?imageId=14412765&x=0&y=20.529801324503&cropw=100&croph=50.993377483444&width=400&height=240
+https://www.cdn.tv2.no/images/14400464.jpg?imageId=14400464&x=0&y=32.450331125828&cropw=100&croph=50.993377483444&width=400&height=240
