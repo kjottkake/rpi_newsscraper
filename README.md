@@ -65,6 +65,12 @@ In this folder there are additional folders containing the news articles for dif
 ## Future Developments. 
 
 
+## FAQ's
+Q: Why are there so many files in the articles directory? Wasn't the requirements 3 articles only?
+
+A: The reasons why there are so many files are 2 fold: 1. I wanted to get a dump of the html data so that it could be processed and sorted easily, this way if there were any future modifications to the scraping functionalities I could back reference the articles as they were on those individual dates. 2. 
+
+
 ## Resources and References I Used
 How to write if statements in bash
 https://ryanstutorials.net/bash-scripting-tutorial/bash-if-statements.php
