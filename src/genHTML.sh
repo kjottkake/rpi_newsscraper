@@ -20,8 +20,24 @@ do
 	echo $TITLE
 	echo $IMG
 
-	touch article$1.html
+	touch article$i.html
 	echo "
-	
-        "
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+    		<meta charset="UTF-8">
+    		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    		<title>$TITLE</title>
+    		<link rel="stylesheet" href="../style.css">
+	</head>
+	<body>
+    		<h1>$TITLE</h1>
+    		<img src="$IMG" alt="$TITLE">
+    		<p>Scrapped on $DATE</p>
+    		<p><a href="$URL">Original Article on TV2.no/nyheter</a></p>
+    		<p><a href="../index.html">Main Page</a></p>
+	</body>
+	</html>	
+        " > article$i.html
 done
