@@ -40,7 +40,7 @@ You can run the project using
 
 ## What are these files???
 
-### Root Directory
+### Root Directory rpi_newsscraper/
 Starting from the root directory we have:
 scrape.sh  repoUpdate.sh cleanup.sh
 
@@ -51,7 +51,7 @@ repoUpdate.sh is a simple script which adds all files to git, commits the files 
 ./repoUpdate.sh "Followed by an argument which serves as the comment for the commit"
 ```
 
-### src Directory
+### src Directory rpi_newsscraper/src
 The source directory contains one additional folder and several files:
 articles folder index.html style.css
 
@@ -59,7 +59,8 @@ index.html is our homepage for the most up to date news.
 
 style.css is the styling for the overall website.
 
-
+### articles Directory rpi_newsscraper/src/articles/
+In this folder there are additional folders containing the news articles for different dates, with the earliest being 4th of December 2021, 2021-12-04
 
 ## Future Developments. 
 
