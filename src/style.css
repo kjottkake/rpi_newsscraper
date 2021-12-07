@@ -13,3 +13,9 @@ h1 {
 img {
     width: 80%;
 }
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: large;
+}
