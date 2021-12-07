@@ -17,7 +17,7 @@ Prior to the processing of each unique news article, a sub folder containing new
 Each news article is indivdiually processed and 3 key elements are then extracted.
 
 The key elements extracted from the article urls are as follows:
-     <li>Url of the article/li>
+     <li>Url of the article</li>
     <li>Title of the article</li>
      <li>Image of the article</li>
 
@@ -38,6 +38,24 @@ You can run the project using
 ./scrape.sh
 ```
 
+## What are these files???
+
+### Root Directory
+Starting from the root directory we have:
+scrape.sh  repoUpdate.sh cleanup.sh
+
+scrape.sh is the main scraping code, here we have the bulk of the scraping and building of the individual pages and composition of the main index page.
+
+repoUpdate.sh is a simple script which adds all files to git, commits the files with a comment, and pushes the commit. An example usage is as follows
+```
+./repoUpdate.sh "Followed by an argument which serves as the comment for the commit"
+```
+
+### src Directory
+
+
+
+## Future Developments. 
 
 
 ## Resources and References I Used
