@@ -52,6 +52,12 @@ repoUpdate.sh is a simple script which adds all files to git, commits the files 
 ```
 
 ### src Directory
+The source directory contains one additional folder and several files:
+articles folder index.html style.css
+
+index.html is our homepage for the most up to date news.
+
+style.css is the styling for the overall website.
 
 
 
