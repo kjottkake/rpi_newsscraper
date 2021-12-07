@@ -62,9 +62,12 @@ echo "
 for ((i=0;i<4;i++))
 do
 	ARTICLE=./test/$((i+1)).txt
+	URL=$(sed "1q;d" $ARTICLE)
 	TITLE=$(sed "2q;d" $ARTICLE)
 	echo "<li>" >> index.html
+	echo "<a href="$URL">" >>index.html
 	echo $TITLE >> index.html
+	echo "</a>" >>index.html
 	echo "</li>" >> index.html
 done
 
