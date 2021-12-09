@@ -5,6 +5,25 @@ This is the final project for IDG1100 Web Fundamentals at NTNU in Gjøvik.
 
 In this project I have developed a series of scripts and configuration files which scrapes news articles from online newspapers (tv2.no/nyheter) and compiles them into a new website which is then republished on a web server running on a Raspberry Pi 3
 
+## Project Features and Optional Features:
+### Main Features
+* Scraping Script
+* HTML Pages
+* HTML Summary
+* Nginx Configuration
+* Crontab
+
+### Optional Features 1 star ⭐️
+* [✅]Deployment Script
+* [✅]Scrape nrk.no or mn24.no
+* [✅]Scrape tv2.no/sport
+* []Sort the news articles by date
+* []Systemd timer unit instead of crontab
+
+### Optional Features 2 star ⭐️⭐️
+* Repo Update Script
+* Summary of each news article on fifth line
+* NginX to generate using CGI via fcgiwrap
 
 ## How it does it.
 First our script scrapes the entire front page of tv2.no/nyheter, it then extracts the individual urls of headlines. 
@@ -55,7 +74,7 @@ scrape.sh  repoUpdate.sh cleanup.sh
 scrape.sh is the main scraping code, here we have the bulk of the scraping and building of the individual pages and composition of the main index page.
 
 repoUpdate.sh is a simple script which adds all files to git, commits the files with a comment, and pushes the commit. An example usage is as follows
-```
+```bash
 ./repoUpdate.sh "Followed by an argument which serves as the comment for the commit"
 ```
 
