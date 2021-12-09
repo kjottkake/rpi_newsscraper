@@ -122,7 +122,7 @@ Two main points I would like to focus on in future developments of this project:
 ## FAQ's
 Q: Why are there so many files in the articles directory? Wasn't the requirements 3 articles only?
 
-A: The reasons why there are so many files are 2 fold: 1. I wanted to get a dump of the html data so that it could be processed and sorted easily, this way if there were any future modifications to the scraping functionalities I could back reference the articles as they were on those individual dates. 2. 
+A: The reasons why there are so many files are 2 fold: 1. I wanted to get a dump of the html data so that it could be processed and sorted easily, this way if there were any future modifications to the scraping functionalities I could back reference the articles as they were on those individual dates. 2. It is difficult to catch bugs when scripting so these files serve as an extra safeguard and assists me in debugging the code. The files acts as a sort of feedback as I can quickly access if the script has successfully ran. 
 
 
 ## Resources and References I Used
