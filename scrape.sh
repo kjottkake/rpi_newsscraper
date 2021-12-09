@@ -83,7 +83,7 @@ do
     		<img src="$IMG" alt="$TITLE">
     		<p>Scrapped on $DATE</p>
     		<p><a href="$URL">Original Article on TV2.no/nyheter</a></p>
-    		<p><a href="../index.html">Main Page</a></p>
+    		<p><a href="../../index.html">Main Page</a></p>
 	</body>
 	</html>	
         " > ./src/articles/$CURRENTDATE/article$i.html
