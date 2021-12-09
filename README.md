@@ -1,8 +1,9 @@
 # News Scrapper! Where we scrape the shit out of news!
 
 ## What it do:
+This is the final project for IDG1100 Web Fundamentals at NTNU in Gjøvik.
 
-This is an automated news scraping script that scrapes contents of tv2.no/nyheter (tv2 news). This script saves daily news headlines and complies them into a new consolidated news website which is then hosted via nginx. This script is configured to run on Raspberry PI. A Raspberry PI 3+ was used in development.
+In this project I have developed a series of scripts and configuration files which scrapes news articles from online newspapers (tv2.no/nyheter) and compiles them into a new website which is then republished on a web server running on a Raspberry Pi 3
 
 
 ## How it does it.
@@ -22,6 +23,13 @@ The key elements extracted from the article urls are as follows:
      <li>Image of the article</li>
 
 Additionally a timestamp with the date of the posting/scraping of the article is also generated.
+
+An addtional line of code adds the files generated into the Nginx files where it is then served over HTTP.
+
+After the news articles are scraped and updated, a repo update script is run, this script allows for the automation of adding all new files and pushing them to the github repository set up.
+
+These scripts are run automatically at 6 hour intervals using crontab entries.
+
 
 ## How to run it.
 After you've configured your raspberry pi you can download the project by using
