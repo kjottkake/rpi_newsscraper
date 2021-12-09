@@ -1,1 +1,6 @@
-https://www.cdn.tv2.no/images/14414639.jpg?imageId=14414639&width=1060&height=597
+https://www.cdn.tv2.no/images/14411423.jpg?imageId=14411423&width=1060&height=597
+https://www.cdn.tv2.no/images/14411452.jpg?imageId=14411452&width=1060&height=597
+https://www.cdn.tv2.no/images/14411479.jpg?imageId=14411479&x=0&y=0&cropw=100&croph=97.927461139896&width=698&height=454
+https://www.cdn.tv2.no/images/10292795.jpg?imageId=10292795&x=12&y=25.697211155378&cropw=74.666666666667&croph=19.521912350598&width=400&height=240
+https://www.cdn.tv2.no/images/10236474.jpg?imageId=10236474&x=17.586206896552&y=31.707317073171&cropw=64.367816091954&croph=39.837398373984&width=400&height=240
+https://www.cdn.tv2.no/images/14336610.jpg?imageId=14336610&x=0&y=20.472440944882&cropw=99.568649339207&croph=60.646325984252&width=400&height=240

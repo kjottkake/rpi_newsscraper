@@ -121,3 +121,7 @@ echo "</ul>
 </body>
 </html>" >> ./src/index.html
 
+echo "Index and pages compiled."
+
+#Here we need to update NginX files
+sudo cp -r src/* /var/www/html/
