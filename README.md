@@ -7,21 +7,21 @@ In this project I have developed a series of scripts and configuration files whi
 
 ## Project Features and Optional Features:
 ### Main Features
-* Scraping Script
-* HTML Pages
-* HTML Summary
-* Nginx Configuration
-* Crontab
+* ✅ Scraping Script
+* ✅ HTML Pages
+* ✅ HTML Summary
+* ✅ Nginx Configuration
+* ✅ Crontab
 
 ### Optional Features 1 star ⭐️
-* [✅]Deployment Script
-* [✅]Scrape nrk.no or mn24.no
-* [✅]Scrape tv2.no/sport
-* []Sort the news articles by date
-* []Systemd timer unit instead of crontab
+* ✅ Deployment Script
+* Scrape nrk.no or mn24.no
+* Scrape tv2.no/sport
+* Sort the news articles by date
+* Systemd timer unit instead of crontab
 
 ### Optional Features 2 star ⭐️⭐️
-* Repo Update Script
+* ✅ Repo Update Script
 * Summary of each news article on fifth line
 * NginX to generate using CGI via fcgiwrap
 
