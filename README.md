@@ -18,10 +18,11 @@ Prior to the processing of each unique news article, a sub folder containing new
 Each news article is indivdiually processed and 3 key elements are then extracted.
 
 The key elements extracted from the article urls are as follows:
+<ul>
      <li>Url of the article</li>
-    <li>Title of the article</li>
+     <li>Title of the article</li>
      <li>Image of the article</li>
-
+</ul>
 Additionally a timestamp with the date of the posting/scraping of the article is also generated.
 
 An addtional line of code adds the files generated into the Nginx files where it is then served over HTTP.
