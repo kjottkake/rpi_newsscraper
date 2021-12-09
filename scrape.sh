@@ -120,8 +120,12 @@ done
 echo "</ul>
 </body>
 </html>" >> ./src/index.html
-
 echo "Index and pages compiled."
+
+
+#call repo update
+./repoUpdate.sh "Scraped $CURRENTDATE news" 
+
 
 #Here we need to update NginX files
 sudo cp -r src/* /var/www/html/

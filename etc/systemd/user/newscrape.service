@@ -1,0 +1,9 @@
+[Unit]
+Description=Run a newscraping service
+
+[Service]
+Type=simple
+ExecStart=/home/pi/webFundies/rpi_newsscraper/scrape.sh
+
+[Install]
+WantedBy=default.target
