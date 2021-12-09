@@ -34,16 +34,15 @@ These scripts are run automatically at 6 hour intervals using crontab entries.
 
 ## How to run it.
 After you've configured your raspberry pi you can download the project by using
-```
+```bash
 git clone https://github.com/kjottkake/rpi_newsscraper.git
 ```
 You can navigate into the project via
-```
+```bash
 cd rpi_newsscraper
 ```
-
 You can run the project using
-```
+```bash
 ./scrape.sh
 ```
 
