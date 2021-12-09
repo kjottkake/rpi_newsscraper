@@ -111,3 +111,9 @@ https://stackoverflow.com/questions/6022384/bash-tool-to-get-nth-line-from-a-fil
 How to grep src from html
 https://stackoverflow.com/questions/44055023/using-grep-to-get-src-attribute-from-html-file
 
+How to host static website using NGINX
+https://jgefroh.medium.com/a-guide-to-using-nginx-for-static-websites-d96a9d034940
+
+ufw command not found
+https://dev.to/delightfullynerdy/bash-ufw-command-not-found-ubuntu-18-04-1agh
+
