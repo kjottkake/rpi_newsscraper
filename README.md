@@ -15,15 +15,15 @@ In this project I have developed a series of scripts and configuration files whi
 
 ### Optional Features 1 star ⭐️
 * ✅ Deployment Script
-* Scrape nrk.no or mn24.no
-* Scrape tv2.no/sport
-* Sort the news articles by date
-* Systemd timer unit instead of crontab
+* ❌ Scrape nrk.no or mn24.no
+* ❌ Scrape tv2.no/sport
+* ✅ Sort the news articles by date
+* ❌ Systemd timer unit instead of crontab
 
 ### Optional Features 2 star ⭐️⭐️
 * ✅ Repo Update Script
-* Summary of each news article on fifth line
-* NginX to generate using CGI via fcgiwrap
+* ❌ Summary of each news article on fifth line
+* ❌ NginX to generate using CGI via fcgiwrap
 
 ## How it does it.
 First our script scrapes the entire front page of tv2.no/nyheter, it then extracts the individual urls of headlines. 
