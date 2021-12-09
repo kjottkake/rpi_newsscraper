@@ -111,7 +111,7 @@ do
 	URL=$(sed "1q;d" $ARTICLE)
 	TITLE=$(sed "2q;d" $ARTICLE)
 	echo "<li>" >> ./src/index.html
-	echo "<a href="$URL">" >>./src/index.html
+	echo "<a href="./articles/$CURRENTDATE/article$i.html">" >>./src/index.html
 	echo $TITLE >> ./src/index.html
 	echo "</a>" >>./src/index.html
 	echo "</li>" >> ./src/index.html
