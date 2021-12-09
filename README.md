@@ -117,3 +117,6 @@ https://jgefroh.medium.com/a-guide-to-using-nginx-for-static-websites-d96a9d0349
 ufw command not found
 https://dev.to/delightfullynerdy/bash-ufw-command-not-found-ubuntu-18-04-1agh
 
+How to check total size of a directory
+https://askubuntu.com/questions/1224/how-do-i-determine-the-total-size-of-a-directory-folder-from-the-command-line
+
